@@ -11,7 +11,7 @@
   </template>
   
   <script>
-  import {Home} from "./views/home.vue";
+  import { Home } from "../views/home.vue";
   
   export default {
     computed: {
