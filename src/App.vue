@@ -1,6 +1,7 @@
 <template>
   <div class="animated-bg">
     <router-view></router-view>
+    <router-link to="/home">Visitar el home</router-link>
   </div>
 </template>
 
