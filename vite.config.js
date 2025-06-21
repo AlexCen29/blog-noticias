@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),    
   ],  
-  base: 'https://alexcen29.github.io/blog-noticias/', // Cambia la URL base a la de jsdelivr
+  base: 'https://alexcen29.github.io/blog-noticias/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
