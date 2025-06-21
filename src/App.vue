@@ -1,9 +1,29 @@
 <template>
-  <div class="animated-bg">
-    <router-view></router-view>
-    <router-link to="/home">Visitar el home</router-link>
-  </div>
-</template>
+    <component :is="layout">
+      <router-view v-slot="{ Component }">
+        <transition appear mode="out-in" name="side">
+            <div :key="Component">
+                <component :is="Component"/>
+            </div>
+        </transition>
+      </router-view>
+    </component>
+  </template>
+  
+  <script>
+  import {Home} from "./views/home.vue";
+  
+  export default {
+    computed: {
+      Home() {
+        return Home
+      },
+      layout() {
+        return this.$route.meta.layout || 'div'
+      }
+    }
+  }
+  </script>
 
 <style scoped>
 .animated-bg {
